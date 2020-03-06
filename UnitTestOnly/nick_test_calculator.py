@@ -1,9 +1,20 @@
 import unittest
+import UnitTestOnly.nick_calculator as nick_calc
 
 
-class MyTestCase(unittest.TestCase):
-    def test_something(self):
-        self.assertEqual(True, False)
+class TestMultiplication(unittest.TestCase):
+    def testMultiply(self):
+        self.assertNotEqual(None, nick_calc.multiplication())
+
+
+class TestFactorial(unittest.TestCase):
+    def testFactorial(self):
+        self.assertNotEqual(None, nick_calc.factorial())
+
+
+class TestAbsolute(unittest.TestCase):
+    def testAbsolute(self):
+        self.assertNotEqual(None, nick_calc.absolute())
 
 
 if __name__ == '__main__':
