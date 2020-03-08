@@ -1,13 +1,13 @@
 
 
-def multiplication():
+def multiplication(val,val2):
     return None
 
 
-def factorial():
+def factorial(val):
     return None
 
 
-def absolute():
+def absolute(val):
     return None
 
