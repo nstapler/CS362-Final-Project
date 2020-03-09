@@ -4,9 +4,10 @@ import random
 def checkIfValid(val):
     if not val:
         return False
-    if type(val) == str and (not val.isNumeric):
+    if type(val) == str and (not val.isnumeric):
         return False
     return True
+
 
 def prepTestInputs(testSelf):
     random.seed()
