@@ -24,7 +24,7 @@ class TestDivision(unittest.TestCase):
 
 
 class TestSquare(unittest.TestCase):
-    def test_sqrt(self):
+    def test_square(self):
         helper.prepTestInputs(self)
         # positive case
         self.assertEqual(math.sqrt(self.posInt), anousha_calc.square(self.posInt))
