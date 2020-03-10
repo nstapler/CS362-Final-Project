@@ -23,7 +23,7 @@ class TestDivision(unittest.TestCase):
         self.assertEqual(False, anousha_calc.division(self.posFloat, self.invalidChar))
 
 
-class TestSquareRoot(unittest.TestCase):
+class TestSquare(unittest.TestCase):
     def test_sqrt(self):
         helper.prepTestInputs(self)
         # positive case
