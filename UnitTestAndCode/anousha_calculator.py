@@ -2,7 +2,7 @@ def division(val1, val2):
     return val1/val2
 
 
-def square_root(val):
+def square(val):
     return val * val
 
 
