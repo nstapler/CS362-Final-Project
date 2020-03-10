@@ -24,20 +24,20 @@ class TestDivision(unittest.TestCase):
 
 
 class TestSquare(unittest.TestCase):
-    def test_sqrt(self):
+    def test_square(self):
         helper.prepTestInputs(self)
         # positive case
-        self.assertEqual(math.sqrt(self.posInt), anousha_calc.sqrt(self.posInt))
-        self.assertEqual(math.sqrt(self.posFloat), anousha_calc.sqrt(self.posFloat))
-        self.assertEqual(math.sqrt(self.fraction), anousha_calc.sqrt(self.fraction))
+        self.assertEqual(math.sqrt(self.posInt), anousha_calc.square(self.posInt))
+        self.assertEqual(math.sqrt(self.posFloat), anousha_calc.square(self.posFloat))
+        self.assertEqual(math.sqrt(self.fraction), anousha_calc.square(self.fraction))
         # negative cases
-        self.assertEqual(math.sqrt(self.negInt), anousha_calc.sqrt(self.negInt))
-        self.assertEqual(math.sqrt(self.negfraction), anousha_calc.sqrt(self.negfraction))
+        self.assertEqual(math.sqrt(self.negInt), anousha_calc.square(self.negInt))
+        self.assertEqual(math.sqrt(self.negfraction), anousha_calc.square(self.negfraction))
         # other
-        self.assertEqual(math.sqrt(self.zeroCase), anousha_calc.sqrt(self.zeroCase))
-        self.assertEqual(False, anousha_calc.sqrt(self.invalidChar))
+        self.assertEqual(math.sqrt(self.zeroCase), anousha_calc.square(self.zeroCase))
+        self.assertEqual(False, anousha_calc.square(self.invalidChar))
         self.assertEqual(math.sqrt(self.hugeNumber),
-                         anousha_calc.sqrt(self.hugeNumber))
+                         anousha_calc.square(self.hugeNumber))
 
 
 class TestFraction(unittest.TestCase):
