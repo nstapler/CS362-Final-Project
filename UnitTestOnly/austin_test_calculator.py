@@ -1,9 +1,9 @@
 import math
 import unittest
 
-import austin_calculator as austin_calc
+import UnitTestOnly.austin_calculator as austin_calc
 
-import helperFuncs as helper
+import UnitTestOnly.helperFuncs as helper
 
 
 
