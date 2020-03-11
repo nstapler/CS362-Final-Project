@@ -14,7 +14,7 @@ def factorial(val):
     if val < 0:
         return 0
     if type(val) == float or val >= 2147483647:
-        print("Must input a valid positive integer that is less than 2147483647 to the factorial function")
+        print("Must input a valid positive integer that is less than 2147483647 to the factorial function.")
         return False
     return math.factorial(val)
 

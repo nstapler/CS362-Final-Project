@@ -37,11 +37,9 @@ class TestFactorial(unittest.TestCase):
         self.assertEqual(0, nick_calc.factorial(self.zeroCase))
         self.assertEqual(False, nick_calc.factorial(self.invalidChar))
         if self.hugeNumber > 2147483647:
-            self.assertEqual(False,
-                             nick_calc.factorial(self.hugeNumber))
+            self.assertEqual(False, nick_calc.factorial(self.hugeNumber))
         else:
-            self.assertEqual(math.factorial(self.hugeNumber),
-                             nick_calc.factorial(self.hugeNumber))
+            self.assertEqual(math.factorial(self.hugeNumber), nick_calc.factorial(self.hugeNumber))
 
 
 class TestAbsolute(unittest.TestCase):
