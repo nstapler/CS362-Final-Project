@@ -11,7 +11,9 @@ def multiplication(val, val2):
 def factorial(val):
     if not helper.checkIfValid(val):
         return False
-    if type(val) == float or val < 0 or val >= 2147483647:
+    if val < 0:
+        return 0
+    if type(val) == float or val >= 2147483647:
         print("Must input a valid positive integer that is less than 2147483647 to the factorial function")
         return False
     return math.factorial(val)

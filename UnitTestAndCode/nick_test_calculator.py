@@ -31,8 +31,8 @@ class TestFactorial(unittest.TestCase):
         self.assertEqual(False, nick_calc.factorial(self.posFloat))
         self.assertEqual(False, nick_calc.factorial(self.fraction))
         # negative cases
-        self.assertEqual(False, nick_calc.factorial(self.negInt))
-        self.assertEqual(False, nick_calc.factorial(self.negFraction))
+        self.assertEqual(0, nick_calc.factorial(self.negInt))
+        self.assertEqual(0, nick_calc.factorial(self.negFraction))
         # other
         self.assertEqual(0, nick_calc.factorial(self.zeroCase))
         self.assertEqual(False, nick_calc.factorial(self.invalidChar))
