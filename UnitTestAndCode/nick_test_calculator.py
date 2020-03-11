@@ -28,16 +28,20 @@ class TestFactorial(unittest.TestCase):
         helper.prepTestInputs(self)
         # positive case
         self.assertEqual(math.factorial(self.posInt), nick_calc.factorial(self.posInt))
-        self.assertEqual(math.factorial(self.posFloat), nick_calc.factorial(self.posFloat))
-        self.assertEqual(math.factorial(self.fraction), nick_calc.factorial(self.fraction))
+        self.assertEqual(False, nick_calc.factorial(self.posFloat))
+        self.assertEqual(False, nick_calc.factorial(self.fraction))
         # negative cases
-        self.assertEqual(math.factorial(self.negInt), nick_calc.factorial(self.negInt))
-        self.assertEqual(math.factorial(self.negfraction), nick_calc.factorial(self.negfraction))
+        self.assertEqual(False, nick_calc.factorial(self.negInt))
+        self.assertEqual(False, nick_calc.factorial(self.negFraction))
         # other
-        self.assertEqual(math.factorial(self.zeroCase), nick_calc.factorial(self.zeroCase))
+        self.assertEqual(0, nick_calc.factorial(self.zeroCase))
         self.assertEqual(False, nick_calc.factorial(self.invalidChar))
-        self.assertEqual(math.factorial(self.hugeNumber),
-                         nick_calc.factorial(self.hugeNumber))
+        if self.hugeNumber > 2147483647:
+            self.assertEqual(False,
+                             nick_calc.factorial(self.hugeNumber))
+        else:
+            self.assertEqual(math.factorial(self.hugeNumber),
+                             nick_calc.factorial(self.hugeNumber))
 
 
 class TestAbsolute(unittest.TestCase):
@@ -49,7 +53,7 @@ class TestAbsolute(unittest.TestCase):
         self.assertEqual(abs(self.fraction), nick_calc.absolute(self.fraction))
         # negative cases
         self.assertEqual(abs(self.negInt), nick_calc.absolute(self.negInt))
-        self.assertEqual(abs(self.negfraction), nick_calc.absolute(self.negfraction))
+        self.assertEqual(abs(self.negFraction), nick_calc.absolute(self.negFraction))
         # other
         self.assertEqual(abs(self.zeroCase), nick_calc.absolute(self.zeroCase))
         self.assertEqual(False, nick_calc.absolute(self.invalidChar))
